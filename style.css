@@ -1,0 +1,429 @@
+:root {
+  --page-bg: #f0bd4f;
+  --card-bg: #ececf4;
+  --accent: #f6d166;
+  --text: #2f3138;
+  --muted: #5f636b;
+  --shadow: 0 20px 60px rgba(19, 25, 37, 0.2);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--page-bg);
+}
+
+.page {
+  width: min(1240px, 100% - 4rem);
+  margin: clamp(1.5rem, 4vw, 2.75rem) auto;
+  display: grid;
+  gap: clamp(2.4rem, 5vw, 4rem);
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  min-height: 78vh;
+  padding: clamp(1.25rem, 2vw, 2rem) clamp(1rem, 3vw, 3.2rem) clamp(1rem, 2vw, 2rem);
+}
+
+.hero-card::before,
+.hero-card::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-card::before {
+  top: -22%;
+  right: -12%;
+  width: 66%;
+  height: 120%;
+  background: var(--accent);
+  border-radius: 48% 0 0 58%;
+}
+
+.hero-card::after {
+  right: 5%;
+  bottom: -50%;
+  width: 54%;
+  height: 72%;
+  background: var(--card-bg);
+  border-radius: 58% 58% 0 0;
+}
+
+.hero-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.hero-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-nav a {
+  text-decoration: none;
+  color: #1e1f22;
+  font-size: 0.95rem;
+}
+
+.menu-button {
+  display: none;
+  border: 1px solid #1e1f22;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 0.25rem 0.55rem;
+  font-size: 1rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.2rem);
+  min-height: 67vh;
+}
+
+.hero-text {
+  width: min(560px, 100%);
+  padding-inline: clamp(0.2rem, 0.5vw, 0.75rem);
+}
+
+.hero-image-wrap {
+  width: clamp(180px, 25vw, 300px);
+  justify-self: center;
+  align-self: center;
+  transform: translate(-56px, -28px);
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(23, 24, 29, 0.18);
+}
+
+.role {
+  margin: 0;
+  color: #ddad36;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0.85rem 0 1.15rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 4.1rem);
+  line-height: 1.1;
+}
+
+.description {
+  margin: 0 0 1.8rem;
+  width: min(500px, 100%);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.68rem 1.25rem;
+}
+
+.btn-primary {
+  background: #f4bf46;
+  color: #141519;
+}
+
+.btn-outline {
+  border: 1px solid #23252a;
+  color: #23252a;
+}
+
+.content-section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.3rem, 3vw, 2.5rem);
+}
+
+.content-section h2 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.projects-section {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr;
+  background: #f7f7fb;
+}
+
+.project-card.reverse {
+  grid-template-columns: 1.35fr 1.05fr;
+}
+
+.project-card.reverse .project-text {
+  order: 2;
+}
+
+.project-card.reverse img {
+  order: 1;
+}
+
+.project-text {
+  padding: clamp(1rem, 2vw, 1.5rem);
+  display: grid;
+  align-content: center;
+  gap: 0.6rem;
+}
+
+.project-text h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+}
+
+.project-text p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.96rem;
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.mini-btn {
+  justify-self: start;
+  border: 1px solid #23252a;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #23252a;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before,
+.contact-section::after {
+  content: "";
+  position: absolute;
+  bottom: -3.6rem;
+  width: 42%;
+  height: 7rem;
+  border-radius: 50% 50% 0 0;
+  background: var(--accent);
+  pointer-events: none;
+}
+
+.contact-section::before {
+  left: -8%;
+}
+
+.contact-section::after {
+  right: -8%;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #d4d6df;
+  border-radius: 6px;
+  padding: 0.58rem 0.65rem;
+  font: inherit;
+  background: #fff;
+}
+
+.send-btn {
+  justify-self: end;
+  border: 0;
+  border-radius: 7px;
+  background: #f4bf46;
+  color: #111216;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .page {
+    width: min(1200px, 100% - 2rem);
+  }
+
+  .hero-card {
+    min-height: auto;
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  .hero-card::before {
+    top: -15%;
+    right: -28%;
+    width: 110%;
+    height: 60%;
+    border-radius: 0 0 0 100%;
+  }
+
+  .hero-card::after {
+    display: none;
+  }
+
+  .hero-nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .hero-nav.open {
+    display: flex;
+  }
+
+  .menu-button {
+    display: inline-flex;
+  }
+
+  .hero-content {
+    display: block;
+    gap: 0.5rem;
+    padding-top: 2.3rem;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-image-wrap {
+    width: min(210px, 58%);
+    margin: 1rem auto 0;
+    transform: none;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .project-card,
+  .project-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.reverse .project-text,
+  .project-card.reverse img {
+    order: initial;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .contact-section::before,
+  .contact-section::after {
+    width: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    width: min(1200px, 100% - 1rem);
+    margin: 0.8rem auto;
+  }
+
+  .hero-card {
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 8.5vw, 2.2rem);
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .content-section {
+    padding: 1.1rem 0.85rem 1.5rem;
+  }
+
+  .project-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-section::before,
+  .contact-section::after {
+    bottom: -4.2rem;
+    height: 7.5rem;
+  }
+}

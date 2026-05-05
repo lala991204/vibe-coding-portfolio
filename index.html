@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero-card" id="about" aria-label="포트폴리오 소개 섹션">
+        <header class="hero-header">
+          <p class="brand">YounJeongOh</p>
+          <nav class="hero-nav" aria-label="주요 메뉴">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+          </nav>
+          <button class="menu-button" type="button" aria-label="메뉴 열기">☰</button>
+        </header>
+
+        <div class="hero-content">
+          <div class="hero-text">
+            <p class="role">AI Engineer</p>
+            <h1>Hello, my name<br />is YounJeongOh.</h1>
+            <p class="description">
+              AI Engineer (Jul 2023–Present) |<br /> M.S. Applied Mathematics (AI/ML Research) |<br /> Machine Learning · Deep Learning · Data Analysis
+            </p>
+            <div class="actions">
+              <a href="#projects" class="btn btn-primary">Projects</a>
+              <a href="https://www.linkedin.com/in/%EC%9C%A4%EC%A0%95-%EC%98%A4-055593220/" class="btn btn-outline" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+          <div class="hero-image-wrap" aria-hidden="true">
+            <img src="./assets/pooh-clean.png?v=2" alt="곰 캐릭터 이미지" />
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section projects-section" id="projects" aria-label="프로젝트 섹션">
+        <h2>Projects</h2>
+
+        <article class="project-card">
+          <div class="project-text">
+            <h3>AI based financial data analysis (OKX)</h3>
+            <p>
+              1) Customer Segmentation using User Data<br />
+              - Applied an RFM-based classification model leveraging user transaction history and fee data<br />
+              - Utilized a GCN model to predict new customer inflow<br />
+              <br />  
+              2) Market Crash Detection Algorithm using Market Data<br />
+              - Developed a closing price crash detection algorithm<br />
+              - Constructed a trading volume network based on Markov probability for data representation
+            </p>
+          </div>
+          <img
+            src="https://web3.okx.com/cdn/assets/imgs/253/962C35DE09FA2ACD.jpg?x-oss-process=image/format,webp"
+            alt="프로젝트 미리보기 이미지 1"
+          />
+        </article>
+
+        <article class="project-card reverse">
+          <div class="project-text">
+            <h3>Golf Swing Posture Correction App Development (Course Project)</h3>
+            <p>
+              Real-Time Golf Swing Posture Tracking Model Development<br />
+              - Developed a real-time body coordinate extraction and analysis tool (velocity and joint angles) using Human Pose Estimation models <br />(e.g., OpenPose, AlphaPose, SimplePose, MediaPipe)<br />
+              - Built a golf club detection model using YOLOv5
+            </p>
+          </div>
+          <img
+            src="https://godomall.speedycdn.net/0c63a4a09eca81761690c0fc4530bea7/editor/board/golfinfo/514/090b5029fe353cb4daac88a9588dff1e.jpg"
+            alt="프로젝트 미리보기 이미지 2"
+          />
+        </article>
+
+        <article class="project-card">
+          <div class="project-text">
+            <h3>School Anthem Analysis Project <br />(Daegu Women & Family Foundation)</h3>
+            <p>
+              - Visualized distinctive keywords from 450 high school anthems in Daegu Metropolitan City<br />
+              - Analyzed relationships among achievement-oriented keywords by high school establishment year
+            </p>
+          </div>
+          <img
+            src="https://www.knu.ac.kr/wbbs/img/intro/symbol_song.gif"
+            alt="프로젝트 미리보기 이미지 3"
+          />
+        </article>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
